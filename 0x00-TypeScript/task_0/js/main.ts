@@ -20,7 +20,7 @@ let student2: Student={
 let studentsList: Array<Student>=[student1, student2];
 
 
-const body: HTMLBodyElement = document.getElementsByTagName("body")[0];
+//const body: HTMLBodyElement = document.getElementsByTagName("body")[0];
 
 const table: HTMLTableElement = document.createElement("table");
 const thead: HTMLTableSectionElement = document.createElement("thead");
