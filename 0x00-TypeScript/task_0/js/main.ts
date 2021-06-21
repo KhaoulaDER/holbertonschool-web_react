@@ -19,8 +19,8 @@ let student2: Student = {
 const studentsList: Array <Student> = [student1, student2];
 
 const table = document.createElement("table");
-let thead = document.createElement("thead");
-let tbody = document.createElement("tbody");
+const thead = document.createElement("thead");
+const tbody = document.createElement("tbody");
 studentsList.forEach((object) => {
     let row = document.createElement('tr');
     let row1 = document.createElement('tr');
