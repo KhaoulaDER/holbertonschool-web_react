@@ -16,9 +16,9 @@ let student2: Student = {
     age: 24,
     location: "Hammamet"
 };
-let studentsList: Array <Student> = [student1, student2];
+const studentsList: Array <Student> = [student1, student2];
 
-let table = document.createElement("table");
+const table = document.createElement("table");
 let thead = document.createElement("thead");
 let tbody = document.createElement("tbody");
 studentsList.forEach((object) => {
