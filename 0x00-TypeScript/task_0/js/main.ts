@@ -20,7 +20,7 @@ const studentsList: Array<Student>;
 studentsList = [student1, student2];
 
 const table = document.createElement("table");
-const tbody = document.createElement("tbody");
+const tbody: HTMLTableSectionElement = document.createElement("tbody");
 studentsList.forEach((object) => {
     let row = document.createElement('tr');
     let name = document.createElement('td');
