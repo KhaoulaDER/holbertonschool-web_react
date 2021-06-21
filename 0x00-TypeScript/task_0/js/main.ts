@@ -16,7 +16,8 @@ const student2: Student = {
     age: 24,
     location: "Hammamet"
 };
-const studentsList: Student[] = [student1, student2];
+const studentsList: Array<Student>;
+studentsList = [student1, student2];
 
 const table = document.createElement("table");
 const thead: HTMLTableSectionElement = document.createElement("thead");
