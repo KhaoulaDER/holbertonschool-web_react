@@ -1,5 +1,5 @@
 interface Student {
-    firstName: string;
+    firstName : string;
     lastName: string;
     age: number;
     location: string;
