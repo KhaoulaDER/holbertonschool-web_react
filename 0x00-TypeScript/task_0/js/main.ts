@@ -4,13 +4,13 @@ interface Student {
     age: number;
     location: string;
 }
-let student1: Student = {
+const student1: Student = {
     firstName: "khaoula",
     lastName: "Derouiche",
     age: 25,
     location: "Hammamet"
 };
-let student2: Student = {
+const student2: Student = {
     firstName: "Oumaima",
     lastName: "Merhbene",
     age: 24,
@@ -22,10 +22,10 @@ const table = document.createElement("table");
 const thead = document.createElement("thead");
 const tbody = document.createElement("tbody");
 studentsList.forEach((object) => {
-    let row = document.createElement('tr');
-    let row1 = document.createElement('tr');
-    let name = document.createElement('td');
-    let location = document.createElement('td');
+    const row = document.createElement('tr');
+    const row1 = document.createElement('tr');
+    const name = document.createElement('td');
+    const location = document.createElement('td');
     name.textContent = object.firstName;
     location.textContent = object.location;
     row.appendChild(name);
