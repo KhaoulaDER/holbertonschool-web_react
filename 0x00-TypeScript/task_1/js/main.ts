@@ -57,11 +57,11 @@ class StudentClass implements StudentClassInterface{
        this.firstName=firstName;
        this.lastName=lastName; 
     }
-    workOnHomework(){
+    workOnHomework():string{
         return("Currently working");
     }
 
-    displayName(){
+    displayName():string{
         return(this.firstName);
     }
 
