@@ -40,17 +40,17 @@ export const printTeacher: printTeacherFunction = ((firstName, lastName) => {
 
 console.log(printTeacher("John", "Doe"));
 
-interface StudentInterface {
+interface StudentClassInterface {
     firstName: string;
     lastName: string;
     workOnHomework():string;
     displayName():string;
 }
 
-interface ConstructorStudent {
-    new (firstName:string, lastName:string):StudentInterface;
+interface StudentConstructor {
+    new (firstName:string, lastName:string):StudentClassInterface;
 }
-class StudentClass implements StudentInterface{
+class StudentClass implements StudentClassInterface{
     firstName: string;
     lastName: string;    
     constructor(firstName: string, lastName: string){
@@ -66,6 +66,10 @@ class StudentClass implements StudentInterface{
     }
 
 }
+let student: StudentClass= new StudentClass("khaled", "Derouiche");
+console.log(student.workOnHomework());
+console.log(student.displayName());
+
 
 
 
