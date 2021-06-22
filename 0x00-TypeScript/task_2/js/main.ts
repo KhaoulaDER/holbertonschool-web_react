@@ -45,12 +45,12 @@ console.log(createEmployee(1000));
 console.log(createEmployee('$500'));
 
 
-function isDirector(employee: Director | Teacher): boolean {
+export function isDirector(employee: Director | Teacher): boolean {
     return (employee instanceof Director) ? true : false;
 
 }
 
-function executeWork(employee: DirectorInterface | TeacherInterface): string {
+export function executeWork(employee: DirectorInterface | TeacherInterface): string {
     return (isDirector(employee)?  employee.workDirectorTasks() :  employee.workTeacherTasks());
 }
 
