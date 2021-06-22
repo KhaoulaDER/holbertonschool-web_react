@@ -50,7 +50,7 @@ function isDirector(employee: Director | Teacher): boolean {
 
 }
 
-function executeWork(employee: DirectorInterface | TeacherInterface): string {
+export function executeWork(employee: DirectorInterface | TeacherInterface): string {
     if(isDirector(employee)){
        
         return((employee instanceof Director)?employee.workDirectorTasks():null) ;
