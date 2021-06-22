@@ -50,7 +50,7 @@ function isDirector(employee: Director | Teacher): boolean {
 
 }
 
-function executeWork(employee: Director | Teacher): string {
+function executeWork(employee: DirectorInterface | TeacherInterface): string {
     return (isDirector(employee)?  employee.workDirectorTasks() :  employee.workTeacherTasks());
 }
 
