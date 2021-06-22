@@ -66,7 +66,7 @@ export const StudentClass: StudentConstructor = class StudentClass implements St
     }
 
 }
-const student: StudentClass  new StudentClass("khaled", "Derouiche");
+const student= new StudentClass("khaled", "Derouiche");
 console.log(student.workOnHomework());
 console.log(student.displayName());
 
