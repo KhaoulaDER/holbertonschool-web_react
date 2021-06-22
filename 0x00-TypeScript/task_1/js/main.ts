@@ -50,7 +50,7 @@ interface StudentClassInterface {
 interface StudentConstructor {
     new(firstName: string, lastName: string): StudentClassInterface;
 }
-const StudentClass: StudentConstructor = class StudentClass implements StudentClassInterface{
+export const StudentClass: StudentConstructor = class StudentClass implements StudentClassInterface{
     firstName: string;
     lastName: string;    
     constructor(firstName: string, lastName: string){
@@ -66,6 +66,9 @@ const StudentClass: StudentConstructor = class StudentClass implements StudentCl
     }
 
 }
+const student: StudentClass  new StudentClass("khaled", "Derouiche");
+console.log(student.workOnHomework());
+console.log(student.displayName());
 
 
 
