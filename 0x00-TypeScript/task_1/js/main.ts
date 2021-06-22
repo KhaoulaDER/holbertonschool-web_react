@@ -1,4 +1,3 @@
-export {}
 interface Teacher {
     readonly firstName: string;
     readonly lastName: string;
@@ -34,10 +33,13 @@ interface printTeacherFunction {
     (firstName: string, lastName: string): string;
 }
 
-const printTeacher: printTeacherFunction = ((firstName, lastName) => {
+export const printTeacher: printTeacherFunction = ((firstName, lastName) => {
     return (`${firstName.charAt(0)}. ${lastName}`);
  
 })
+
+console.log(printTeacher("John", "Doe"));
+
 
 
 
