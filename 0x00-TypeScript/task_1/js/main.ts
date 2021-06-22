@@ -66,9 +66,6 @@ const StudentClass: StudentConstructor = class StudentClass implements StudentCl
     }
 
 }
-const student: StudentClass= new StudentClass("khaled", "Derouiche");
-console.log(student.workOnHomework());
-console.log(student.displayName());
 
 
 
