@@ -1,36 +1,48 @@
-interface Teacher {
-    readonly firstName: string;
-    readonly lastName: string;
-    fullTimeEmployee: boolean;
-    yearsOfExperience?: number;
+interface Student {
+    firstName: string;
+    lastName: string;
+    age: number;
     location: string;
-    [propName: string]: any;
 }
-
-const teacher3: Teacher = {
-    firstName: 'John',
-    fullTimeEmployee: false,
-    lastName: 'Doe',
-    location: 'London',
-    contract: false,
+const student1: Student = {
+    firstName: "khaoula",
+    lastName: "Derouiche",
+    age: 25,
+    location: "Hammamet"
 };
+const student2: Student = {
+    firstName: "Oumaima",
+    lastName: "Merhbene",
+    age: 24,
+    location: "Hammamet"
+};
+const studentsList: Array<Student> = [student1, student2];
 
-console.log(teacher3);
+const table = document.createElement("table");
+const tbody: HTMLTableSectionElement = document.createElement("tbody");
+const thead: HTMLTableSectionElement = document.createElement("thead");
+studentsList.forEach((object) => {
+    let row = document.createElement('tr');
+    let row1 = document.createElement('tr');
+    let name = document.createElement('td');
+    let location = document.createElement('td');
+   
+    name.textContent = object.firstName;
+    location.textContent = object.location;
 
-interface Directors extends Teacher {
-    numberOfReports: number;
-}
-const director1: Directors = {
-    firstName: 'John',
-    lastName: 'Doe',
-    location: 'London',
-    fullTimeEmployee: true,
-    numberOfReports: 17,
-  };
-  console.log(director1);
+    row.appendChild(name);
+    row.appendChild(location);
 
-  function printTeacher(firstName,lastName){
-      return (`${firstName.charAt(0)}. ${lastName}`);
-  }
-
-  console.log(printTeacher("John", "Doe"));
+    tbody.appendChild(row);
+});
+let row1 = document.createElement('tr');
+let nameTitle = document.createElement('th');
+let locationTitle = document.createElement('th');
+nameTitle.textContent = "Name";
+locationTitle.textContent = "Location";
+row1.appendChild(nameTitle);
+row1.appendChild(locationTitle);
+thead.appendChild(row1);
+table.appendChild(thead);
+table.appendChild(tbody);
+document.body.appendChild(table);
