@@ -50,7 +50,7 @@ interface StudentClassInterface {
 interface StudentConstructor {
     new (firstName:string, lastName:string):StudentClassInterface;
 }
-class StudentClass implements StudentClassInterface{
+export class StudentClass implements StudentClassInterface{
     firstName: string;
     lastName: string;    
     constructor(firstName: string, lastName: string){
