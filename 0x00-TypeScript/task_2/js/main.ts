@@ -50,6 +50,8 @@ function isDirector(employee: Director | Teacher): boolean {
 
 }
 
-function executeWork(employee: Director | Teacher): string {
+function executeWork(employee): string {
     return (isDirector(employee)) ? employee.workDirectorTasks() : employee.workTeacherTasks();
 }
+console.log(executeWork(createEmployee(200)));
+console.log(executeWork(createEmployee(1000)));
