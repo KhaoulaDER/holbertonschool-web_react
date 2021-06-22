@@ -26,11 +26,18 @@ const director1: Directors = {
     location: 'London',
     fullTimeEmployee: true,
     numberOfReports: 17,
-  };
-  console.log(director1);
+};
+console.log(director1);
 
-  function printTeacher(firstName,lastName){
-      return (`${firstName.charAt(0)}. ${lastName}`);
-  }
+interface printTeacherFunction {
+    (firstName: string, lastName: string): string;
+}
 
-  console.log(printTeacher("John", "Doe"));
+const printTeacher: printTeacherFunction = ((firstName, lastName) => {
+    return (`${firstName.charAt(0)}. ${lastName}`);
+ 
+})
+
+
+
+console.log(printTeacher("John", "Doe"));
