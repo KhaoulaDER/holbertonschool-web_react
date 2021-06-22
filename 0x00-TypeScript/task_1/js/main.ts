@@ -47,7 +47,7 @@ interface StudentClassInterface {
     displayName():string;
 }
 
-interface StudentConstructor {
+interface StudentConstructor{
     new (firstName:string, lastName:string):StudentClassInterface;
 }
 export class StudentClass implements StudentClassInterface{
