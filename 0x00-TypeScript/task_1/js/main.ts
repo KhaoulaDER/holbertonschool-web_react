@@ -43,12 +43,12 @@ console.log(printTeacher("John", "Doe"));
 interface StudentClassInterface {
     firstName: string;
     lastName: string;
-    workOnHomework():string;
-    displayName():string;
+    workOnHomework(): string;
+    displayName(): string;
 }
 
 interface StudentConstructor {
-    new(firstName:string, lastName:string): StudentClassInterface;
+    new(firstName: string, lastName: string): StudentClassInterface;
 }
 export class StudentClass implements StudentClassInterface{
     firstName: string;
@@ -69,6 +69,7 @@ export class StudentClass implements StudentClassInterface{
 let student: StudentClass= new StudentClass("khaled", "Derouiche");
 console.log(student.workOnHomework());
 console.log(student.displayName());
+
 
 
 
