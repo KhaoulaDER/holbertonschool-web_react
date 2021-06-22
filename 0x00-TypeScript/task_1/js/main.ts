@@ -40,4 +40,3 @@ const printTeacher: printTeacherFunction = ((firstName, lastName) => {
 
 
 
-console.log(printTeacher("John", "Doe"));
