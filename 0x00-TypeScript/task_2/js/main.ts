@@ -62,7 +62,7 @@ console.log(executeWork(createEmployee(1000)));
 
 type Subjects = "Math" | "History";
 
-export function teachClass(todayClass: string){
+export function teachClass(todayClass: Subjects){
     if (todayClass == "Math") return ("Teaching Math");
     if (todayClass == "History") return ("Teaching History");
 
