@@ -45,22 +45,3 @@ console.log(createEmployee(1000));
 console.log(createEmployee('$500'));
 
 
-function isDirector(employee: Director | Teacher): boolean {
-    return (employee instanceof Director) ? true : false;
-
-}
-
-function executeWork(employee: Director | Teacher): string {
-    if(isDirector(employee)){
-       
-        return(employee.workDirectorTasks()) ;
-
-    }
-    else {
-    return ((employee instanceof Teacher)?employee.workTeacherTasks():null) ;
-    }
-}
-
-
-console.log(executeWork(createEmployee(200)));
-console.log(executeWork(createEmployee(1000)));
