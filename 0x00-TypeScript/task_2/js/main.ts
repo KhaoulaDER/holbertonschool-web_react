@@ -9,8 +9,7 @@ interface TeacherInterface {
     getCoffeeBreak(): string;
     workTeacherTasks(): string;
 }
-
-export class Director implements DirectorInterface {
+class Director implements DirectorInterface {
     workFromHome() {
         return ("Working from home");
     }
@@ -22,7 +21,7 @@ export class Director implements DirectorInterface {
     }
 }
 
-export class Teacher implements TeacherInterface {
+class Teacher implements TeacherInterface {
     workFromHome() {
         return ("Working from home");
     }
