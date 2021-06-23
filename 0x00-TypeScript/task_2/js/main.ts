@@ -1,6 +1,6 @@
 interface DirectorInterface {
     workFromHome(): string;
-    getToWork(): string;
+    getCoffeeBreak(): string;
     workDirectorTasks(): string;
 }
 
@@ -10,11 +10,11 @@ interface TeacherInterface {
     workTeacherTasks(): string;
 }
 
-class Director implements DirectorInterface {
+export class Director implements DirectorInterface {
     workFromHome() {
         return ("Working from home");
     }
-    getToWork() {
+    getCoffeeBreak() {
         return ("Getting a coffee break");
     }
     workDirectorTasks() {
@@ -22,7 +22,7 @@ class Director implements DirectorInterface {
     }
 }
 
-class Teacher implements TeacherInterface {
+export class Teacher implements TeacherInterface {
     workFromHome() {
         return ("Working from home");
     }
@@ -50,10 +50,10 @@ function isDirector(employee: Director | Teacher): boolean {
 
 }
 
-export function executeWork(employee: Director | Teacher): string {
+function executeWork(employee: Director | Teacher): string {
     if(isDirector(employee)){
        
-        return((employee instanceof Director)?employee.workDirectorTasks():null) ;
+        return(employee.workDirectorTasks()) ;
 
     }
     else {
