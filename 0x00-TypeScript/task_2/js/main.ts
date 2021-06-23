@@ -47,7 +47,7 @@ function isDirector(employee: Director | Teacher): employee is Director {
 
 }
 
-function executeWork(employee: Director | Teacher): string {
+function executeWork(employee: DirectorInterface | TeacherInterface): string {
     if (isDirector(employee)) {
         return (employee.workDirectorTasks());
     }
